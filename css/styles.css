@@ -21,6 +21,9 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
 }
 
 .cat-container {
@@ -40,8 +43,20 @@ body {
     background: url('../img/cat.svg');
     background-position: center;
     background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
 
-    animation: move-forward 1.5s steps(16, end) infinite; 
+    animation: move-forward 1.5s steps(16, end) infinite;
+        -webkit-animation-name: move-forward;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+            -o-animation-name: move-forward;
+            -o-animation-duration: 1.5s;
+            -o-animation-iteration-count: infinite;
+                -moz-animation-name: move-forward;
+                -moz-animation-duration: 1.5s;
+                -moz-animation-iteration-count: infinite;
     z-index: 100;
 }
 
@@ -50,12 +65,28 @@ body {
     to { background-position: -8120px 0; }
 }
 
+@-webkit-keyframes move-forward {
+    from { background-position: 0 0; }
+    to { background-position: -8120px 0; }
+}
+
+@-o-keyframes move-forward {
+    from { background-position: 0 0; }
+    to { background-position: -8120px 0; }
+}
+
+@-moz-keyframes move-forward {
+    from { background-position: 0 0; }
+    to { background-position: -8120px 0; }
+}
+
 .floor {
     height: 20vh;
-    background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 30%, rgba(65,10,160,1) 96%, rgba(9,9,121,1) 99%, rgba(114,11,193,1) 100%);
     
     box-shadow: 0px -19px 21px -4px rgba(9, 9, 121, 1);
+        -webkit-box-shadow: 0px -19px 21px -4px rgba(9, 9, 121, 1);
+        -moz-box-shadow: 0px -19px 21px -4px rgba(9, 9, 121, 1);
 }
 
 @media all and (min-width:760px) {
@@ -78,6 +109,21 @@ body {
     }
 
     @keyframes move-forward {
+        from { background-position: 0 0; }
+        to { background-position: -27077px 0; }
+    }
+
+    @-webkit-keyframes move-forward {
+        from { background-position: 0 0; }
+        to { background-position: -27077px 0; }
+    }
+
+    @-moz-keyframes move-forward {
+        from { background-position: 0 0; }
+        to { background-position: -27077px 0; }
+    }
+
+    @-o-keyframes move-forward {
         from { background-position: 0 0; }
         to { background-position: -27077px 0; }
     }
